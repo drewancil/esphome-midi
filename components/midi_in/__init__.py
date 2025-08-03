@@ -136,12 +136,12 @@ CONFIG_SCHEMA = cv.All(
                     ),
                 }
             ),
-            cv.Optional(CONF_CONNECTED): binary_sensor.BINARY_SENSOR_SCHEMA.extend(
+            cv.Optional(CONF_CONNECTED): binary_sensor.binary_sensor_schema(binary_sensor.BinarySensor).extend(
                 {
                     cv.GenerateID(): cv.declare_id(binary_sensor.BinarySensor),
                 }
             ),
-            cv.Optional(CONF_PLAYBACK): binary_sensor.BINARY_SENSOR_SCHEMA.extend(
+            cv.Optional(CONF_PLAYBACK): binary_sensor.binary_sensor_schema(binary_sensor.BinarySensor).extend(
                 {
                     cv.GenerateID(): cv.declare_id(binary_sensor.BinarySensor),
                 }
